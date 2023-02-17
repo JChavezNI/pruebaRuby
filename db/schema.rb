@@ -14,8 +14,8 @@ ActiveRecord::Schema.define(version: 2022_02_23_023508) do
 
   create_table "crypto_coins", primary_key: "singleton_lock", force: :cascade do |t|
     t.datetime "last_sync_at"
-    t.decimal "eth_price", precision: 10, scale: 11, default: "0.0"
-    t.decimal "btc_price", precision: 10, scale: 11, default: "0.0"
+    t.decimal "eth_price", default: "0.0"
+    t.decimal "btc_price", default: "0.0"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

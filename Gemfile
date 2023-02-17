@@ -5,8 +5,10 @@ ruby '2.7.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.6'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+
+# Use mysql as the database for Active Record in production environment
+gem 'mysql2', '~> 0.5.3'
+
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
@@ -50,6 +52,9 @@ group :development do
   gem "pry-byebug"
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # Use sqlite3 as the database for Active Record in development environment
+  gem 'sqlite3', '~> 1.4'
 end
 
 group :test do
