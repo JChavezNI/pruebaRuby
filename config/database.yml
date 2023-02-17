@@ -24,7 +24,7 @@ production:
   adapter: mysql2
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  database: calculadora
-  host: database-1.cch6thfumacv.us-east-1.rds.amazonaws.com
-  username: admin
-  password: root12345
+  database: <%= ENV["DATABASE_NAME"] %>
+  host: <%= ENV["DATABASE_HOST"] %>
+  username: <%= ENV["DATABASE_USER"] %>
+  password: <%= ENV["DATABASE_PASSWORD"] %>
